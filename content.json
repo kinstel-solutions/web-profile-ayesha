@@ -1,0 +1,106 @@
+{
+  "AYESHA ENTERPRISES content for profile.docx": "Tab 1\n\n# AYESHA ENTERPRISES\n\n\n\n**Electrical • Mechanical • Infrastructure Works**\n\n**Established: 2018**\n\n\n\n---\n\n\n\n## Company Introduction\n\n\n\nAyesha Enterprises is a professionally managed proprietorship firm established in 2018, engaged in execution of **Electrical, Mechanical and Allied Infrastructure Works**. The firm has been consistently delivering quality-driven services to government, semi-government and private sector clients, with a strong focus on safety, compliance, timelines and cost effectiveness.\n\n\n\nWith a technically skilled team and hands-on project execution capability, Ayesha Enterprises undertakes projects ranging from LT/HT electrical works, DG sets, UPS systems, internal & external electrification, earthing, lighting, panels, and associated mechanical works.\n\n\n\n---\n\n\n\n## Our Vision\n\n\n\nTo become a trusted and preferred infrastructure services partner by delivering reliable, safe and technically sound solutions while maintaining the highest standards of professionalism and ethics.\n\n\n\n---\n\n\n\n## Our Commitment\n\n\n\n* Timely execution of projects\n\n* Compliance with relevant IS standards and specifications\n\n* Safety-first approach at site\n\n* Cost-effective and optimized solutions\n\n* Long-term client relationships through performance and trust\n\n\n\n---\n\n\n\n## Nature of Services\n\n\n\n**Electrical Works**\n\n\n\n* Internal & External Electrification\n\n* LT Panels, Cabling & Termination\n\n* Street Lighting & Area Lighting\n\n* Earthing & Lightning Protection\n\n* UPS Systems & Batteries\n\n* DG Sets Installation & Commissioning\n\n\n\n**Mechanical & Allied Works**\n\n\n\n* Equipment installation support\n\n* HVAC associated electrical works\n\n* Infrastructure support services\n\n\n\n---\n\n\n\n## Organizational Structure\n\n\n\n* **Proprietor / Managing Head**\n\n* **Project Manager**\n\n* **Site Engineers / Supervisors**\n\n* **Skilled & Semi‑Skilled Workforce**\n\n\n\n---\n\n\n\n## Key Strengths\n\n\n\n* Experienced site execution team\n\n* Familiarity with government tender procedures\n\n* Strong vendor & supplier network\n\n* Quality workmanship and supervision\n\n* Flexibility to handle fast‑track projects\n\n\n\n---\n\n\n\n## Statutory & Registration Details\n\n\n\n* **Name of Firm:** Ayesha Enterprises\n\n* **Year of Establishment:** 2018\n\n* **Nature of Firm:** Proprietorship\n\n* **GST Registration:** (To be inserted)\n\n* **MSME / UDYAM:** (If applicable)\n\n* **PAN:** (To be inserted)\n\n\n\n---\n\n\n\n## Clients / Project Exposure\n\n\n\n* Government & PSU Contractors\n\n* Private Developers\n\n* Infrastructure & EPC Contractors\n\n\n\n*(Client list and logos can be added as per availability)*\n\n\n\n---\n\n\n\n## Health, Safety & Quality (HSEQ)\n\n\n\nAyesha Enterprises follows strict safety norms at site and ensures use of PPE, proper supervision and adherence to approved drawings and specifications. Quality checks are performed at every stage of execution.\n\n\n\n---\n\n\n\n## Contact Details\n\n\n\n**Ayesha Enterprises**\n\nAddress: __________________________\n\nMobile: __________________________\n\nEmail: __________________________\n\n\n\n---\n\n\n\n*This profile has been prepared in reference to standard professional company profile formats similar to the sample shared by the client fileciteturn0file0.*\n\n\n\nTab 2\n\nclientile\n\nCnds, CPWD, Airport Authority of India, ITBP, CSIR-NBRI, CSIR-IITR, CSIR-CEERI, MNNIT, FFDC, IOCL, BPCL, IIT-Kanpur, IIT-Roorkee, VA Tech Wabag Limited, UP Jal Nigam,\n\n\n\nMajor Works Executed\n\nElectrical up-gradation of sub-station (old capacity enhancement and modernization works).\n\nElectrical up-gradation including complete internal electrical wiring works.\n\nElectrical up-gradation involving fire alarm system installation and allied works.\n\nReplacement of old distribution panels with new panels including testing and commissioning.\n\nUp-gradation of LT panel at electrical room of institutional buildings.\n\nRepairing, cable laying, and removal of burnt electrical components including restoration works.\n\nSupply and fixing of AC-3, 500 Amp, 4-pole power contactors including commissioning.\n\nProvision of street lighting at Banthara and Biomass Plant areas.\n\nInstallation of new street lights in front of CPMB, Nursery and Garden areas.\n\nConstruction of multi-storied faculty quarters at MNNIT, Prayagraj including electrical works.\n\nSupply and installation of electrical starters and associated control panels.\n\nSITC of 62.5 kVA DG set at 1500 RPM, 415 volts including complete commissioning.\n\nSupply, installation, testing, and commissioning of electrical systems for institutional facilities.\n\nSITC of silent type, liquid-cooled DG set of 500 kVA capacity.\n\nProvision and installation of 1010 kVA DG set at CSIR-CEERI campus.\n\nConstruction of small post office building at Itwa including electrification works.\n\nConstruction of small post office building including complete electrical installations.\n\nConversion and renovation of laboratory facilities including electrical modifications.\n\nRepair, renovation, and replacement of damaged AC sheets and electrical fittings.\n\nConstruction of A-Type two-section school building including electrical infrastructure.\n\nUp-gradation of infrastructure facilities under modernization activities.\n\nComprehensive repairing and overhauling of existing electrical systems and panels.\n\nSurvey, submission of approved designs and drawings, followed by execution of works.\n\nDesign, supply, installation, testing, and commissioning of complete electrical systems.\n\n\n\n",
+  "instructs.docx": "Next.js Web-to-PDF Company Profile. Goal: Build a print-optimized Company Profile as a Next.js app that can be exported using Chrome → Ctrl+P → Save as PDF with professional A4 layout. Print & Layout Rules (VERY IMPORTANT)\n\nPage size: A4 (210mm × 297mm)\n\nEach section must fit exactly within one A4 page\n\nExplicit page breaks between sections\n\nNo infinite scrolling\n\nNo sticky, fixed, or absolute positioning\n\nNo viewport units (vh, vw)\n\nUse millimeters (mm) or Tailwind spacing equivalents\n\nColors must print correctly\n\nOutput Expectation\n\nThe result must:\n\nLook like a professionally designed company profile PDF\n\nPrint perfectly via Ctrl+P → Save as PDF\n\n\n\n",
+  "WORK.xlsx": [
+    {
+      "S.No": 1,
+      "Name of Work": "Electrical UP- Gradation of Sub-Station (Old CDRI Building) at CSIR-IITR Main Campus. (Client CSIR-IITR)"
+    },
+    {
+      "S.No": 2,
+      "Name of Work": "Electrical UP- Gradation (Electrical Wiring Works and Electrical Panel Works) at FT Block 3rd Floor CSIR-IITR Lucknow. (Client CSIR-IITR)"
+    },
+    {
+      "S.No": 3,
+      "Name of Work": "Electrical UP- Gradation (Fire alarm System) at FT Block 2nd Floor CSIR-IITR Main Campus Lucknow. (Client CSIR-IITR) "
+    },
+    {
+      "S.No": 4,
+      "Name of Work": "Replacement of OLD Distribution Panel By New Panels at Garden Block (Client CSIR-NBRI)"
+    },
+    {
+      "S.No": 5,
+      "Name of Work": "Up gradation of LT Panel at Electrical Room Of Garden Block (Client CSIR-NBRI)"
+    },
+    {
+      "S.No": 6,
+      "Name of Work": "Repairing,Cable Laying, Removal of Burnt Electrical System, Re-Wiring At First Floor of K.N Kaul Block, Main Building"
+    },
+    {
+      "S.No": 7,
+      "Name of Work": "SUPPLY AND FIXING OF AC-3, 500 AMP.4 POLE POWER CONTACTOR,REPAIRING AND TESTING OF AMF CONTROL PANEL AND SITC OF INDOOR TYPE OF LT DISTRIBUTION CUM CHANGE OVER SWITCH"
+    },
+    {
+      "S.No": 8,
+      "Name of Work": "Provision of Street Light at Banthara and Biomass Site of CSIR-NBRI (Client CSIR-NBRI)"
+    },
+    {
+      "S.No": 9,
+      "Name of Work": "New Street Light Infront of CPMB, Nursery- Garden Block and New pole Light Main Building (Client CSIR-NBRI)"
+    },
+    {
+      "S.No": 10,
+      "Name of Work": "C/o Multi-Storied Faculty Qtr at MNNIT, Prayagraj(SH: Boring and Installation of 01 No Tube well in Residential colony and connection with existing pipe line). (Client CPWD)"
+    },
+    {
+      "S.No": 11,
+      "Name of Work": "Supply and Installation of Electrical Starter Panel, Electrical Wiring and Earthing in Various water Supply scheme in Distt, Maharajganj (Client U.P Jal Nigam, Rural)"
+    },
+    {
+      "S.No": 12,
+      "Name of Work": "SITC of 62.5 KVA DG Set at 1500 RPM, 415 volt, 50 Hz, 3 phase conforming to BS:649/5514 including cabling and other associated works complete in all respect at 8 Nos. Tubewells of Nagar Palika Parishad Muzaffarnagar under 15th Financial Commission (Tied Grant) State of U.P., Distt- Muzaffarnagar.(Client U.P Jal Nigam, Urban)"
+    },
+    {
+      "S.No": 13,
+      "Name of Work": "SUPPLY, INSTALLATION, TESTING & COMMISSIONING OF 400 KVA\r\nD.G. SET-02 NOS. & EXHAUST SYSTEM INCLUDING ALL ASSOCIATED\r\nWORK AT 48 MLD MPS INDIRAPURAM, GHAZIABAD. (Client U.P Jal Nigam, Urban)"
+    },
+    {
+      "S.No": 14,
+      "Name of Work": "SITC of silent Type, liquid Cooled DG Set 500 KVA rating 415+ 6% volts, 50 HZ @ 0.85PF lagging (as per latest pollution norms), Supply and laying of 1x3.5x400 Sq.mm size, XLPE Armoured cable with Aluminum conductor 1100V grade and allied works complete in all respect at Head Office Campus, U.P. Jal Nigam (Rural),Lucknow.(Client U.P Jal Nigam,Rural)"
+    },
+    {
+      "S.No": 15,
+      "Name of Work": "Provision of the 1010 kVA DG Set at CSIR- CEERI, Pilani (Rajasthan)”(Client CSIR-CEERI) "
+    },
+    {
+      "S.No": 16,
+      "Name of Work": "Construction of small P.O. building at Itwa in Gorakhpur\r\nRegion, Uttar Pradesh. (Client Post Office) "
+    },
+    {
+      "S.No": 17,
+      "Name of Work": "Construction of Small Post office building at Asmoli in Bareilly\r\nDivision UP(Client Post Office) "
+    },
+    {
+      "S.No": 18,
+      "Name of Work": "Conversion and renovation of the Lab (previously Phytotron Facility) to the Plant Tissue and transformation facility in the garden at NBRI, Lucknow.(Client CSIR-NBRI)"
+    },
+    {
+      "S.No": 19,
+      "Name of Work": "Repair/renovation and change of damaged AC sheet, floor, doors\r\nand painting of Nursery Store room, Tractor store room, Guest\r\nHouse power supply room, workshop, Generator room and store\r\nnear workshop at Banthra, Lucknow. (Client CSIR-NBRI)"
+    },
+    {
+      "S.No": 20,
+      "Name of Work": "Construction of A Type two section school Building 09 Nos. Staff qtrs. Boundary wall Ramp for Handicapped upto Ist floor and other facilities including IEI & fans etc. at kendriya Vidyalaya Sumerpur Hamirpur UP. (SH : Providing services of 03 Nos. computer operators, 01 No MTS & 01 No Sweeper). Sub Division-II 01 No Computer Operator, Sub Division-III 01 No Computer Operator, Account Branch 01 No Computer Operator Sub Division-III 01 No MTS & O/o, EE-K, 01 No Sweeper. (Client CPWD)"
+    },
+    {
+      "S.No": 21,
+      "Name of Work": "Up gradation of Infrastructure Activities in MSME Technology Centers at FFDC, Kannauj (UP) (SH: Construction of Administrative/Research & Training Lab, Executive Hostel & Boys Hostel, packaging Unit, Residential Quartes including EI, Wet Riser & Fire alarm system, Sub-station, DG Set, Lift, Solar, VRV/VRF, CCTV & Horticulture work). (SH : Providing services of 02 Nos. computer operators and 02 No. MTS). . (Client CPWD)"
+    },
+    {
+      "S.No": 21,
+      "Name of Work": "COMPREHENSIVE REPAIRING & OVERHAULING OF THE CLARIFIER\r\nINCLUDING SUPPLY, INSTALLATION, TESTING & COMMISSIONING OF DRIVE HEAD MECHANISM WITH DRIVE & DRIVEN SPROCKET, BASE FRAME, CHAIN & GEARED MOTOR COMPLETE ASSEMBLY ASSOCIATED WITH SPECIFIC M.S. FABRICATION WORK, AS PER EXISTING DESIGN, MODEL & COMPONENT SPECIFICATIONS AT 30 MLD STP, LONI DISTT. GHAZIABAD.  (Client U.P Jal Nigam, Urban)"
+    },
+    {
+      "S.No": 22,
+      "Name of Work": "Survey, Submission of approved Design & Drawing from\r\nGovt. Engineering Institute for Installation of Gobar\r\nGas/Electricity Generation plant of capacity not less than 100\r\ncum and supply & installation of 15 KVA Power Generation\r\nunit for Running electrical Equipment and also provide\r\ngobar gas to 15-20 person at Madwaliya Gosadan, Block-\r\nNichlaul Dist. Maharajganj including all material T&P etc\r\ncomplete with all Taxes. At DBOT pattern with 5 year O&M\r\nDistrict: Maharajganj (Client U.P Jal Nigam,Rural)"
+    },
+    {
+      "S.No": 23,
+      "Name of Work": "Supply, Installation, Testing & commissioning of Solar Photo Voltaic System of rating 450 KWp with D.G. Synchronization works & 3 months trial run at 5 MLD Johar Ali University I.P.S. of Rampur Sewerage Scheme, Distt- Rampur in Major Replacement Fund under One City One Operator Programme.  (Client U.P Jal Nigam, Urban)"
+    },
+    {
+      "S.No": 24,
+      "Name of Work": "Design, Supply, Installation, Testing & Commissioning of\r\nSolar PV system of rating 50 KWp & 18 KWp with D.G.\r\nset synchronization work and Trial & Run of Solar Power\r\nPlant for 03 months at Sohan Tau Ashram MPS and Lal\r\nMahadev IPS respectively at Anoopshahar Sewerage\r\nScheme Distt. Bulandshahar under OCOP Programme.  (Client U.P Jal Nigam, Urban)"
+    }
+  ]
+}

@@ -1,26 +1,177 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --gold: #d4af37;
+  --light-gold: #f4e4c1;
+  --dark-gold: #b8941f;
+  --black: #0a0a0a;
+  --charcoal: #1a1a1a;
+  --gray-dark: #2a2a2a;
+  --gray-medium: #3a3a3a;
+  --white: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+@theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  
+  --color-gold: #d4af37;
+  --color-gold-light: #f4e4c1;
+  --color-gold-dark: #b8941f;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #0a0a0a;
+  color: var(--white);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+  
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
+
+.a4-page {
+  background: var(--black);
+  width: 210mm;
+  height: 297mm;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 1cm rgba(212, 175, 55, 0.3);
+  overflow: hidden;
+  position: relative;
+  page-break-after: always;
+}
+
+@media print {
+  .a4-page {
+    margin: 0;
+    box-shadow: none;
+    height: 297mm;
+    width: 210mm;
+    page-break-after: always;
+  }
+}
+
+/* Gold Gradient Text Effect */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f4e4c1 0%, #d4af37 50%, #b8941f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold Border Glow */
+.gold-glow {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 
+              0 0 40px rgba(212, 175, 55, 0.3),
+              inset 0 0 10px rgba(212, 175, 55, 0.1);
+}
+
+/* Luxury Card */
+.luxury-card {
+  background: linear-gradient(135deg, var(--charcoal) 0%, var(--gray-dark) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  position: relative;
+}
+
+.luxury-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* Pattern Backgrounds */
+.pattern-dots {
+  background-image: radial-gradient(circle, rgba(212, 175, 55, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.pattern-grid {
+  background-image: 
+    linear-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.pattern-diagonal {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(212, 175, 55, 0.03) 10px,
+    rgba(212, 175, 55, 0.03) 20px
+  );
+}
+
+/* Hexagon Pattern */
+.pattern-hexagon {
+  background-image: 
+    radial-gradient(circle at 50% 0, transparent 40%, rgba(212, 175, 55, 0.05) 40%, rgba(212, 175, 55, 0.05) 50%, transparent 50%),
+    radial-gradient(circle at 0% 50%, transparent 40%, rgba(212, 175, 55, 0.05) 40%, rgba(212, 175, 55, 0.05) 50%, transparent 50%),
+    radial-gradient(circle at 100% 50%, transparent 40%, rgba(212, 175, 55, 0.05) 40%, rgba(212, 175, 55, 0.05) 50%, transparent 50%);
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 0 0;
+}
+
+/* Gold Shine Animation (for screen only) */
+@media screen {
+  .gold-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gold-shine::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 70%
+    );
+    animation: shine 3s infinite;
+  }
+  
+  @keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+  }
+}
+
+/* Premium Section Divider */
+.gold-divider {
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--gold) 50%, 
+    transparent 100%
+  );
+}
+
+/* Badge Style */
+.badge-gold {
+  background: radial-gradient(circle, #d4af37 0%, #b8941f 100%);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4),
+              inset 0 1px 3px rgba(255, 255, 255, 0.3);
 }
