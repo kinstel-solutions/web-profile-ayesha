@@ -1,116 +1,84 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
+import { Document, Page, pdfjs } from 'react-pdf';
 import A4Page from './A4Page';
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import 'react-pdf/dist/Page/TextLayer.css';
+
+// Configure PDF worker
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+
+const certificates = [
+  { name: 'Udyam Registration', file: '/certs/ayesha-udyam-registration-certificate.pdf' },
+  { name: 'Character Certificate', file: '/certs/character.pdf' },
+  { name: 'Electrical License', file: '/certs/electrical-license.pdf' },
+  { name: 'Labour Registration', file: '/certs/labour-reg.pdf' },
+  { name: 'GST Certificate', file: '/certs/30001215530000999c11.pdf' },
+  { name: 'Registration Certificate', file: '/certs/aa090220027080z-rc28022020-1.pdf' },
+  { name: 'PAN Allotment', file: '/certs/upknp3446887000-certificate-allotment.pdf' },
+];
 
 const Certificates = () => {
-  // Each certificate can have multiple pages
-  const certificates = [
-    { 
-      name: 'Udyam Registration Certificate', 
-      pages: ['/certs/images/udyam-1.jpg'] // Add more pages if needed: ['/certs/images/udyam-1.jpg', '/certs/images/udyam-2.jpg']
-    },
-    { 
-      name: 'Character Certificate', 
-      pages: ['/certs/images/character-1.jpg']
-    },
-    { 
-      name: 'Electrical License', 
-      pages: ['/certs/images/electrical-1.jpg']
-    },
-    { 
-      name: 'Labour Registration', 
-      pages: ['/certs/images/labour-1.jpg']
-    },
-    { 
-      name: 'GST Certificate', 
-      pages: ['/certs/images/gst-1.jpg']
-    },
-    { 
-      name: 'Registration Certificate', 
-      pages: ['/certs/images/registration-1.jpg']
-    },
-    { 
-      name: 'PAN Allotment', 
-      pages: ['/certs/images/pan-1.jpg']
-    },
-  ];
-
-  // Flatten all certificate pages into individual A4 pages
-  const allPages: { certName: string; imagePath: string; pageNum: number; totalPages: number; globalPageNum: number }[] = [];
-  let globalPageCounter = 11; // Starting page number
-  
-  certificates.forEach(cert => {
-    cert.pages.forEach((imagePath, idx) => {
-      allPages.push({
-        certName: cert.name,
-        imagePath,
-        pageNum: idx + 1,
-        totalPages: cert.pages.length,
-        globalPageNum: globalPageCounter++
-      });
-    });
-  });
-
   return (
     <>
-      {allPages.map((page, index) => (
-        <A4Page key={index} className="bg-white text-black p-0 overflow-hidden">
+      {certificates.map((cert, index) => (
+        <PdfCertificate key={index} cert={cert} startPage={11 + index * 2} /> 
+        // Note: Page numbering is approximate here, ideally we'd track cumulative pages but that's complex with async loading
+      ))}
+    </>
+  );
+};
+
+const PdfCertificate = ({ cert, startPage }: { cert: { name: string, file: string }, startPage: number }) => {
+  const [numPages, setNumPages] = useState<number | null>(null);
+
+  function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
+    setNumPages(numPages);
+  }
+
+  return (
+    <Document
+      file={cert.file}
+      onLoadSuccess={onDocumentLoadSuccess}
+      className="flex flex-col gap-8"
+      loading={
+        <A4Page className="bg-white flex items-center justify-center">
+            <div className="animate-pulse flex flex-col items-center">
+                <div className="h-12 w-12 bg-gray-200 rounded-full mb-4"></div>
+                <div className="h-4 w-48 bg-gray-200 rounded"></div>
+            </div>
+        </A4Page>
+      }
+    >
+      {numPages && Array.from(new Array(numPages), (el, index) => (
+        <A4Page key={`page_${index + 1}`} className="bg-white text-black p-0 overflow-hidden relative !h-auto min-h-[297mm]">
           
           {/* Top Banner */}
-          <div className="absolute top-0 left-0 right-0 bg-black text-white p-3 z-20 flex justify-between items-center">
+          <div className="absolute top-0 left-0 right-0 bg-black text-white p-3 z-20 flex justify-between items-center print:hidden">
             <div>
               <p className="text-xs tracking-widest text-gold uppercase">
-                {page.certName}
-                {page.totalPages > 1 && ` (Page ${page.pageNum} of ${page.totalPages})`}
+                {cert.name}
+                {numPages > 1 && ` (Page ${index + 1} of ${numPages})`}
               </p>
             </div>
-            <div className="text-right">
-              <p className="text-xs text-gray-400 font-mono">PAGE {page.globalPageNum}</p>
-            </div>
+            {/* <div className="text-right">
+              <p className="text-xs text-gray-400 font-mono">PAGE {startPage + index}</p>
+            </div> */}
           </div>
 
-          {/* Certificate Image - Full Page */}
-          <div className="absolute inset-0 pt-12 pb-10 px-8 flex items-center justify-center">
-            <div className="w-full h-full border-4 border-gold rounded shadow-2xl overflow-hidden bg-white">
-              <img
-                src={page.imagePath}
-                alt={`${page.certName} - Page ${page.pageNum}`}
-                className="w-full h-full object-contain"
-                onError={(e) => {
-                  // Fallback if image doesn't exist
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                  const parent = target.parentElement;
-                  if (parent) {
-                    parent.innerHTML = `
-                      <div class="w-full h-full flex items-center justify-center p-8 text-center bg-gray-50">
-                        <div>
-                          <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-gold flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-black">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-                            </svg>
-                          </div>
-                          <p class="text-lg font-bold mb-2 text-gray-800">${page.certName}</p>
-                          <p class="text-sm text-gray-600 mb-4">Image not found</p>
-                          <div class="bg-yellow-50 border border-yellow-200 rounded p-4 text-left max-w-md mx-auto">
-                            <p class="text-xs text-gray-700">
-                              <strong>Instructions:</strong><br/>
-                              1. Convert PDF to images using a PDF converter<br/>
-                              2. Save as: <code class="bg-gray-200 px-1">${page.imagePath}</code><br/>
-                              3. Supported formats: JPG, PNG
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    `;
-                  }
-                }}
-              />
-            </div>
+          {/* PDF Page Container */}
+          <div className="w-full h-full flex flex-col items-center pt-12"> 
+            <Page 
+                pageNumber={index + 1} 
+                width={790} // A4 width in pixels (approx @ 96dpi is 794, leaving some padding)
+                className="shadow-md mb-4"
+                renderTextLayer={false}
+                renderAnnotationLayer={false}
+            />
           </div>
 
           {/* Bottom Footer */}
-          <div className="absolute bottom-0 left-0 right-0 bg-black text-white p-2 z-20 flex justify-between items-center text-xs">
+          <div className="absolute bottom-0 left-0 right-0 bg-black text-white p-2 z-20 flex justify-between items-center text-xs print:hidden">
             <div className="flex items-center gap-2 text-gray-400">
               <div className="w-2 h-2 rounded-full bg-green-500"></div>
               <span>Verified & Valid</span>
@@ -119,7 +87,7 @@ const Certificates = () => {
           </div>
         </A4Page>
       ))}
-    </>
+    </Document>
   );
 };
 

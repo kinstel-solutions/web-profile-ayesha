@@ -4,22 +4,22 @@ import { DotPattern } from './BackgroundPatterns';
 
 const Gallery = () => {
   const images = [
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%207.56.30%20PM.jpeg',
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%207.59.31%20PM.jpeg',
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%208.08.10%20PM%20(3).jpeg',
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%208.08.11%20PM%20(1).jpeg',
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%208.08.12%20PM%20(1).jpeg',
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%208.08.13%20PM%20(1).jpeg',
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%208.08.14%20PM%20(1).jpeg',
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%208.08.14%20PM%20(2).jpeg',
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%208.10.06%20PM.jpeg',
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%208.17.38%20PM.jpeg',
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%208.19.37%20PM%20(1).jpeg',
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%208.20.50%20PM.jpeg',
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%208.22.52%20PM.jpeg',
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%208.27.02%20PM.jpeg',
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%208.32.48%20PM%20(1).jpeg',
-    '/showcase/WhatsApp%20Image%202026-01-19%20at%208.32.48%20PM.jpeg',
+    '/showcase/image-01.jpeg',
+    '/showcase/image-02.jpeg',
+    '/showcase/image-03.jpeg',
+    '/showcase/image-04.jpeg',
+    '/showcase/image-05.jpeg',
+    '/showcase/image-06.jpeg',
+    '/showcase/image-07.jpeg',
+    '/showcase/image-08.jpeg',
+    '/showcase/image-09.jpeg',
+    '/showcase/image-10.jpeg',
+    '/showcase/image-11.jpeg',
+    '/showcase/image-12.jpeg',
+    '/showcase/image-13.jpeg',
+    '/showcase/image-14.jpeg',
+    '/showcase/image-15.jpeg',
+    '/showcase/image-16.jpeg',
   ];
 
   // Split into pages (6 images per page)
