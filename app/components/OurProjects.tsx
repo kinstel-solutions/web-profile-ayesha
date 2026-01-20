@@ -31,7 +31,7 @@ const OurProjects = () => {
     "Design, Supply, Installation, Testing & Commissioning of Solar PV system of rating 50 KWp & 18 KWp with D.G. set synchronization work and Trial & Run of Solar Power Plant for 03 months at Sohan Tau Ashram MPS and Lal Mahadev IPS respectively at Anoopshahar Sewerage Scheme Distt. Bulandshahar under OCOP Programme. (Client U.P Jal Nigam, Urban)",
   ];
 
-  const projectsPerPage = 12;
+  const projectsPerPage = 10;
   const totalPages = Math.ceil(projects.length / projectsPerPage);
 
   return (

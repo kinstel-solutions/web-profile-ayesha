@@ -86,7 +86,9 @@ const Introduction = () => {
                 
                 {/* Proprietor Qualifications */}
                 <div className="bg-black p-6 rounded-lg border-2 border-gold gold-glow">
-                   <h4 className="text-gold font-bold uppercase text-sm tracking-wider mb-4 text-center">Proprietor Credentials</h4>
+                   <h4 className="text-gold font-bold uppercase text-lg tracking-wider mb-2 text-center">Er. Mohd Amir</h4>
+                   <p className="text-gray-400 text-xs text-center mb-4">Proprietor</p>
+                   <h5 className="text-gold/80 font-semibold uppercase text-xs tracking-wider mb-4 text-center border-t border-gray-800 pt-4">Credentials</h5>
                    <div className="space-y-3">
                        {PROFILE_DATA.proprietor.qualifications.map((qual, idx) => (
                            <div key={idx} className="flex items-center gap-3 bg-gray-900 p-3 rounded">

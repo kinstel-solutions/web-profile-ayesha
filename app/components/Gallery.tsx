@@ -56,9 +56,9 @@ const Gallery = () => {
               </div>
 
               {/* Image Grid */}
-              <div className="flex-grow grid grid-cols-3 gap-4">
+              <div className="flex-grow grid grid-cols-3 gap-4 auto-rows-fr">
                 {pageImages.map((imagePath, idx) => (
-                  <div key={idx} className="luxury-card rounded-lg overflow-hidden group relative h-full">
+                  <div key={idx} className="rounded-lg overflow-hidden group relative aspect-[4/3] border border-gold/30">
                     <img
                       src={imagePath}
                       alt={`Project showcase ${startIdx + idx + 1}`}

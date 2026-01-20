@@ -9,13 +9,13 @@ import 'react-pdf/dist/Page/TextLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const certificates = [
-  { name: 'Udyam Registration', file: '/certs/ayesha-udyam-registration-certificate.pdf' },
-  { name: 'Character Certificate', file: '/certs/character.pdf' },
-  { name: 'Electrical License', file: '/certs/electrical-license.pdf' },
-  { name: 'Labour Registration', file: '/certs/labour-reg.pdf' },
   { name: 'GST Certificate', file: '/certs/30001215530000999c11.pdf' },
-  { name: 'Registration Certificate', file: '/certs/aa090220027080z-rc28022020-1.pdf' },
-  { name: 'PAN Allotment', file: '/certs/upknp3446887000-certificate-allotment.pdf' },
+  { name: 'Electrical License', file: '/certs/electrical-license.pdf' },
+  { name: 'Character Certificate', file: '/certs/character.pdf' },
+  { name: 'MSME (Udyam Registration)', file: '/certs/ayesha-udyam-registration-certificate.pdf' },
+  { name: 'Labour Registration', file: '/certs/labour-reg.pdf' },
+  { name: 'PF Registration', file: '/certs/aa090220027080z-rc28022020-1.pdf' },
+  { name: 'ESIC (PAN Allotment)', file: '/certs/upknp3446887000-certificate-allotment.pdf' },
 ];
 
 const Certificates = () => {
