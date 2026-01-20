@@ -23,9 +23,9 @@ const Certificates = () => {
               className="bg-white text-black !p-0 overflow-hidden relative !h-auto min-h-[297mm] print:!h-[297mm] print:!min-h-[297mm] flex flex-col"
             >
               {/* Top Banner */}
-              <div className="absolute top-0 left-0 right-0 bg-black text-white p-3 z-20 flex justify-between items-center print:hidden">
+              <div className="absolute top-0 left-0 right-0 bg-black text-white p-3 z-20 flex justify-between items-center text-xs">
                 <div>
-                  <p className="text-xs tracking-widest text-gold uppercase">
+                  <p className="tracking-widest text-gold uppercase">
                     {cert.name}
                     {cert.images.length > 1 && ` (Page ${imgIndex + 1} of ${cert.images.length})`}
                   </p>
@@ -33,17 +33,17 @@ const Certificates = () => {
               </div>
 
               {/* Image Container */}
-              <div className="w-full flex-grow flex flex-col items-center justify-center pt-12 pb-8 print:pt-0 print:pb-0">
+              <div className="w-full flex-grow flex flex-col items-center justify-center pt-12 pb-8">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src={imgSrc} 
                   alt={`${cert.name} - Page ${imgIndex + 1}`}
-                  className="max-w-[95%] max-h-[280mm] object-contain shadow-md mb-4 print:shadow-none print:max-w-full print:max-h-[290mm] print:mb-0"
+                  className="max-w-[95%] max-h-[280mm] object-contain shadow-md mb-4 print:shadow-none print:max-w-full print:max-h-[260mm] print:mb-0"
                 />
               </div>
 
               {/* Bottom Footer */}
-              <div className="absolute bottom-0 left-0 right-0 bg-black text-white p-2 z-20 flex justify-between items-center text-xs print:hidden">
+              <div className="absolute bottom-0 left-0 right-0 bg-black text-white p-2 z-20 flex justify-between items-center text-xs">
                 <div className="flex items-center gap-2 text-gray-400">
                   <div className="w-2 h-2 rounded-full bg-green-500"></div>
                   <span>Verified & Valid</span>
