@@ -20,7 +20,7 @@ const Certificates = () => {
           {cert.images.map((imgSrc, imgIndex) => (
             <A4Page 
               key={`${certIndex}-${imgIndex}`} 
-              className="bg-white text-black !p-0 overflow-hidden relative !h-auto min-h-[297mm] flex flex-col"
+              className="bg-white text-black !p-0 overflow-hidden relative !h-auto min-h-[297mm] print:!h-[297mm] print:!min-h-[297mm] flex flex-col"
             >
               {/* Top Banner */}
               <div className="absolute top-0 left-0 right-0 bg-black text-white p-3 z-20 flex justify-between items-center print:hidden">
@@ -33,12 +33,12 @@ const Certificates = () => {
               </div>
 
               {/* Image Container */}
-              <div className="w-full flex-grow flex flex-col items-center justify-center pt-12 pb-8">
+              <div className="w-full flex-grow flex flex-col items-center justify-center pt-12 pb-8 print:pt-0 print:pb-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src={imgSrc} 
                   alt={`${cert.name} - Page ${imgIndex + 1}`}
-                  className="max-w-[95%] max-h-[280mm] object-contain shadow-md mb-4 print:shadow-none print:max-w-full"
+                  className="max-w-[95%] max-h-[280mm] object-contain shadow-md mb-4 print:shadow-none print:max-w-full print:max-h-[290mm] print:mb-0"
                 />
               </div>
 
