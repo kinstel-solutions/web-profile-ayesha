@@ -10,9 +10,9 @@ const TableOfContents = () => {
     { number: '04', title: 'Services & Expertise', page: '04' },
     { number: '05', title: 'Project Portfolio', page: '05-06' },
     { number: '06', title: 'Our Projects List', page: '07-08' },
-    { number: '07', title: 'Gallery Showcase', page: '09-10' },
-    { number: '08', title: 'Certifications', page: '11-12' },
-    { number: '09', title: 'Contact Information', page: '13' },
+    { number: '07', title: 'Gallery Showcase', page: '09-16' },
+    { number: '08', title: 'Certifications', page: '17-28' },
+    { number: '09', title: 'Contact Information', page: '29' },
   ];
 
   return (

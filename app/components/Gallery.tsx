@@ -23,8 +23,8 @@ const Gallery = () => {
     '/showcase/image-16.jpeg',
   ];
 
-  // Split into pages (4 images per page)
-  const imagesPerPage = 4;
+  // Split into pages (2 images per page)
+  const imagesPerPage = 2;
   const totalPages = Math.ceil(images.length / imagesPerPage);
   
   return (
@@ -56,15 +56,15 @@ const Gallery = () => {
                   </div>
               </div>
 
-              {/* Image Grid - 2x2 Grid for 4 images */}
-              <div className="flex-grow grid grid-cols-2 gap-6 auto-rows-fr">
+              {/* Image Grid - Landscape format for 4 images */}
+              <div className="flex-grow grid grid-cols-1 gap-4">
                 {pageImages.map((imagePath, idx) => (
-                  <div key={idx} className="rounded-lg overflow-hidden group relative h-full border border-gold/30">
+                  <div key={idx} className="rounded-lg overflow-hidden group relative w-full aspect-[16/9] border border-gold/30">
                     <Image
                       src={imagePath}
                       alt={`Project showcase ${startIdx + idx + 1}`}
                       fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
+                      sizes="100vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                       unoptimized
                     />
