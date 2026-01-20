@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import A4Page from './A4Page';
 import { DotPattern } from './BackgroundPatterns';
 
@@ -22,8 +23,8 @@ const Gallery = () => {
     '/showcase/image-16.jpeg',
   ];
 
-  // Split into pages (6 images per page)
-  const imagesPerPage = 6;
+  // Split into pages (4 images per page)
+  const imagesPerPage = 4;
   const totalPages = Math.ceil(images.length / imagesPerPage);
   
   return (
@@ -55,25 +56,18 @@ const Gallery = () => {
                   </div>
               </div>
 
-              {/* Image Grid */}
-              <div className="flex-grow grid grid-cols-3 gap-4 auto-rows-fr">
+              {/* Image Grid - 2x2 Grid for 4 images */}
+              <div className="flex-grow grid grid-cols-2 gap-6 auto-rows-fr">
                 {pageImages.map((imagePath, idx) => (
-                  <div key={idx} className="rounded-lg overflow-hidden group relative aspect-[4/3] border border-gold/30">
-                    <img
+                  <div key={idx} className="rounded-lg overflow-hidden group relative h-full border border-gold/30">
+                    <Image
                       src={imagePath}
                       alt={`Project showcase ${startIdx + idx + 1}`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      unoptimized
                     />
-                    {/* Overlay on Hover */}
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all flex items-center justify-center">
-                      <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                        <div className="w-12 h-12 rounded-full border-2 border-gold flex items-center justify-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 text-gold">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 ))}
               </div>
